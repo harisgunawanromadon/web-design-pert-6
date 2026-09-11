@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f4f8;
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    color: #222;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto 32px auto;
+}
+
+.topbar h1 {
+    font-size: 20px;
+    margin: 0;
+    transition: font-size 0.4s ease;
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    border-radius: 28px;
+    transition: background-color 0.3s;
+}
+
+/*adalah pseudo-element — cara membuat elemen "virtual" tambahan tanpa perlu menulis tag HTML baru*/
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #2575fc;
+}
+
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toggle-label {
+    font-size: 14px;
+    color: #666;
+    transition: color 0.4s ease;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.main-content {
+    font-size: 18px;
+    line-height: 1.7;
+    padding: 24px;
+    border-radius: 10px;
+    transition: font-size 0.4s ease, padding 0.4s ease;
+}
+
+.main-content h2 {
+    font-size: 22px;
+    transition: font-size 0.4s ease;
+}
+
+.sidebar-info,
+.ads,
+.footer-info {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* === MODE FOKUS AKTIF === */
+body.focus-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.focus-mode .toggle-label {
+    color: #aaa;
+}
+
+body.focus-mode .main-content {
+    font-size: 26px;
+    line-height: 1.8;
+    padding: 32px;
+}
+
+body.focus-mode .main-content h2 {
+    font-size: 32px;
+}
+
+body.focus-mode .hide-on-focus {
+    display: none;
+}
+
+body.focus-mode .card-dark {
+    background: #1e1e1e;
+}

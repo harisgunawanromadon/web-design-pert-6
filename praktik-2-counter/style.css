@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.card {
+    background: #fff;
+    padding: 40px 32px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    color: #2575fc;
+    font-size: 24px;
+}
+
+p.subtitle {
+    color: #666;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+#counterValue {
+    font-size: 64px;
+    font-weight: 700;
+    margin: 20px 0;
+    color: #333;
+    transition: color 0.2s;
+}
+
+#counterValue.positive {
+    color: #2575fc;
+}
+
+#counterValue.negative {
+    color: #e63946;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    color: #fff;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#decreaseBtn {
+    background: #e63946;
+}
+
+#decreaseBtn:hover {
+    background: #d12c39;
+}
+
+#increaseBtn {
+    background: #2575fc;
+}
+
+#increaseBtn:hover {
+    background: #1a5fd0;
+}
+
+#resetBtn {
+    width: 100%;
+    background: #6c757d;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#resetBtn:hover {
+    background: #5a6268;
+}

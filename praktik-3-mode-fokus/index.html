@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode Fokus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+    <h1>Halaman Baca</h1>
+    <div class="toggle-wrapper">
+        <span class="toggle-label">Mode Fokus</span>
+        <label class="switch">
+            <input type="checkbox" id="focusToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="main-content card-dark">
+        <h2>Judul Artikel Contoh</h2>
+        <p>
+            Ini adalah konten utama yang tetap terlihat baik saat mode fokus aktif maupun tidak.
+            Ketika mode fokus dinyalakan, ukuran font teks ini akan membesar dan latar belakang
+            halaman berubah menjadi gelap, supaya kamu bisa lebih berkonsentrasi membaca tanpa
+            distraksi dari elemen-elemen lain di sekitar halaman.
+        </p>
+    </div>
+
+    <div class="sidebar-info hide-on-focus card-dark">
+        <strong>Sidebar Info</strong>
+        <p>Ini adalah elemen tidak penting, seperti sidebar berisi info tambahan. Akan disembunyikan saat mode fokus aktif.</p>
+    </div>
+
+    <div class="ads hide-on-focus card-dark">
+        <strong>Iklan / Promosi</strong>
+        <p>Konten promosi seperti ini biasanya mengganggu fokus membaca, sehingga ikut disembunyikan.</p>
+    </div>
+
+    <div class="footer-info hide-on-focus card-dark">
+        <strong>Footer</strong>
+        <p>Informasi footer seperti kontak, copyright, dsb juga disembunyikan saat mode fokus aktif.</p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
